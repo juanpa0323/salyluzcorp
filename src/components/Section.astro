@@ -1,0 +1,25 @@
+---
+const { id, title, src, children } = Astro.props;
+---
+
+<section
+  id={id}
+  class="py-3 px-3 p-6 flex flex-col"
+>
+  <div class="w-full ">
+    <h3 class="text-center font-bold mb-3">
+      {title}
+    </h3>
+    <p class="text-gray-800 mt-2 ">
+      <slot />
+    </p>
+  </div>
+</section>
+
+<style>
+  section {
+    max-width: 700px;
+    margin: 0 auto 48px;
+  }
+
+</style>
