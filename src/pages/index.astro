@@ -6,12 +6,20 @@ import Section from "../components/Section.astro";
 
 <Layout title="CORPORACION SAL Y LUZ">
   <Section title="Historia de sal y luz">
-    Nació entre 1989 y 1990 en la iglesia de san Javier, empezó como un grupo
-    juvenil conformado por 100 jóvenes, creado por la necesidad de la violencia
-    que avía en esos momentos, para que aquellos jóvenes encontraran un apoyo y
-    no estuvieran tan vulnerables a caer en ese mundo, Que a medida del tiempo
-    fue creciendo hasta llegar a convertirse en una corporación sin ánimo de
-    lucro.
+	<div class="d-flex flex-column flex-md-row bd-highlight align-items-center responsive-section">
+		<div class="p-2 bd-highlight img-container">
+		  <img src="images/img4.jpg" alt="" class="img-fluid" />
+		</div>
+		<div class="p-2 flex-shrink-1 bd-highlight text-container">
+		  Nació entre 1989 y 1990 en la iglesia de san Javier, empezó como un
+		  grupo juvenil conformado por 100 jóvenes, creado por la necesidad de la
+		  violencia que avía en esos momentos, para que aquellos jóvenes
+		  encontraran un apoyo y no estuvieran tan vulnerables a caer en ese
+		  mundo, Que a medida del tiempo fue creciendo hasta llegar a convertirse
+		  en una corporación sin ánimo de lucro.
+		</div>
+	  </div>
+	  
   </Section>
   <Section title="¿Que hace la corporación?">
     Es una organización social de sin ánimo de lucro jurídicamente constituida,
@@ -66,7 +74,7 @@ import Section from "../components/Section.astro";
     hasta los adultos mayores.
   </Section>
   <section class="d-flex align-items-center section-container">
-    <div class="container">
+    <div class="container border rounded-3 border-primary p-2">
       <div class="row">
         <div class="col-md-6 my-auto">
           <h2 class="section-title">Quiero Ayudar</h2>
@@ -137,6 +145,21 @@ import Section from "../components/Section.astro";
   </section>
 </Layout>
 <style>
+  .img-container {
+    flex: 0 0 50%; /* La imagen ocupará el 50% del ancho del contenedor */
+  }
+
+  .img-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    .img-container {
+      flex: 0 0 100%; /* La imagen ocupará el 100% del ancho del contenedor en pantallas pequeñas */
+    }
+  }
+
   /* styles.css */
   .section-container {
     background-color: #fff; /* Color de fondo amarillo */

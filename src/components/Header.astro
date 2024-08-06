@@ -1,11 +1,16 @@
 ---
+import IconX from "../../public/Icons/IconX.astro"
+import IconWhatsApp from "../../public/Icons/IconWhatsApp.astro"
+import IconFaceboock from "../../public/Icons/IconFaceboock.astro"
+import IconInstagram from "../../public/Icons/IconInstagram.astro"
+
 
 ---
 
 <header class="bg-image">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand text-light" href="#">
         <img
           src="images/logo.png"
           alt=""
@@ -28,11 +33,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            <a class="nav-link active text-light" aria-current="page" href="#"
+              >Inicio</a
+            >
           </li>
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle"
+              class="nav-link dropdown-toggle text-light"
               href="#"
               id="navbarDropdown"
               role="button"
@@ -50,7 +57,7 @@
           </li>
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle"
+              class="nav-link dropdown-toggle text-light"
               href="#"
               id="navbarDropdown"
               role="button"
@@ -67,9 +74,41 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Contacto</a>
+            <a class="nav-link text-light" aria-current="page" href="#"
+              >Contacto</a
+            >
           </li>
         </ul>
+        <div class="d-flex social-icons">
+          <a
+            href="https://www.instagram.com/salyluzcorp"
+            target="_blank"
+            class="social-icon instagram"
+          >
+            <IconInstagram/>
+          </a>
+          <a
+            href="https://www.facebook.com/people/Corporaci%C3%B3n-Sal-y-Luz/100069783105596/"
+            target="_blank"
+            class="social-icon facebook"
+          >
+            <IconFaceboock/>
+          </a>
+          <a
+            href="https://wa.me/573215574456"
+            target="_blank"
+            class="social-icon whatsapp"
+          >
+           <IconWhatsApp />
+          </a>
+          <a
+            href="https://x.com/"
+            target="_blank"
+            class="social-icon twitter"
+          >
+            <IconX/>
+          </a>
+        </div>
       </div>
     </div>
   </nav>
@@ -79,7 +118,7 @@
   >
     <h1 class="fw-bold mt-5">CORPORACIÓN SAL Y LUZ</h1>
     <p class="text-sm">Organización juvenil Cultural y Comunitaria</p>
-
+    <!-- 
     <div
       id="carouselExampleIndicators"
       class="carousel slide"
@@ -133,20 +172,62 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
-    </div>
+    </div>-->
   </div>
 </header>
 <style>
-    /* styles.css */
-.carousel-inner {
+  .navbar {
+    background-color: #0044cc;
+    color: aliceblue;
+  }
+  /* styles.css */
+  .carousel-inner {
     width: 100%;
     max-height: 400px; /* Ajusta esta altura según tus necesidades */
-}
+  }
 
-.carousel-item .img-custom {
+  .carousel-item .img-custom {
     object-fit: cover;
     width: 100%;
     height: 400px; /* Asegúrate de que esta altura coincida con la altura máxima del contenedor */
-}
+  }
 
+  /* iconos redes sociales nav */
+  .social-icons {
+    gap: 10px; /* Espacio entre los iconos */
+  }
+
+  .social-icon {
+    color: #fff; /* Color blanco para los iconos */
+    background-color: #000; /* Fondo negro para los iconos */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition:
+      background-color 0.3s,
+      transform 0.3s;
+  }
+
+  .social-icon:hover {
+    transform: scale(
+      1.1
+    ); /* Aumenta ligeramente el tamaño al pasar el cursor */
+  }
+
+  .instagram {
+    background-color: #e4405f;
+  }
+  .facebook {
+    background-color: #1877f2;
+  }
+  .whatsapp {
+    background-color: #25d366;
+  }
+  .twitter {
+    background-color: black;
+  }
 </style>
