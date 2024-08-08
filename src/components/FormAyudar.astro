@@ -1,0 +1,120 @@
+---
+
+---
+<section class="d-flex align-items-center section-container">
+    <div class="container border rounded-3 border-primary p-2">
+      <div class="row">
+        <div class="col-md-6 my-auto">
+          <h2 class="section-title">Quiero Ayudar</h2>
+          <hr class="section-underline w-100" />
+          <p class="section-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+            itaque enim tenetur nobis autem reprehenderit similique? Repellendus
+            harum quia dolore, cupiditate veritatis, temporibus nisi
+            reprehenderit magni culpa, accusantium sunt ex?
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="card shadow p-4">
+            <form>
+              <div class="form-group">
+                <label for="name">Nombres y Apellidos</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Nombres y Apellidos"
+                />
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="email">Correo electrónico</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Correo electrónico"
+                  />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="phone">Celular</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="phone"
+                    placeholder="Celular"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="2"
+                  placeholder="Mensaje"></textarea>
+              </div>
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="dataPolicy"
+                />
+                <label class="form-check-label" for="dataPolicy"
+                  >Acepto política de manejo de datos.</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* styles.css */
+  .section-container {
+    background-color: #fff; 
+    padding: 50px 0;
+  }
+
+  .section-title {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #0044cc; /* Color del texto del título */
+  }
+
+  .section-underline {
+    width: 50px;
+    height: 2px;
+    background-color: black;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .section-description {
+    font-size: 1.2rem;
+    color: #000000; /* Color del texto de la descripción */
+  }
+
+  .card {
+    border: none;
+    border-radius: 10px;
+  }
+
+  .form-control {
+    border-radius: 5px;
+  }
+
+  .btn-primary {
+    background-color: #ffd700; /* Color del botón */
+    border: none;
+    color: black;
+    font-weight: bold;
+  }
+
+  .btn-primary:hover {
+    background-color: #0044cc; /* Color del botón al pasar el mouse */
+  }
+  </style>

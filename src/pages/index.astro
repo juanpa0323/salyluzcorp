@@ -1,34 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import Section from "../components/Section.astro";
+import FormAyudar from "../components/FormAyudar.astro";
+
 ---
 
 <Layout title="CORPORACION SAL Y LUZ">
-  <Section title="Historia de sal y luz">
-	<div class="d-flex flex-column flex-md-row bd-highlight align-items-center responsive-section">
-		<div class="p-2 bd-highlight img-container">
-		  <img src="images/img4.jpg" alt="" class="img-fluid" />
-		</div>
-		<div class="p-2 flex-shrink-1 bd-highlight text-container">
-		  Nació entre 1989 y 1990 en la iglesia de san Javier, empezó como un
-		  grupo juvenil conformado por 100 jóvenes, creado por la necesidad de la
-		  violencia que avía en esos momentos, para que aquellos jóvenes
-		  encontraran un apoyo y no estuvieran tan vulnerables a caer en ese
-		  mundo, Que a medida del tiempo fue creciendo hasta llegar a convertirse
-		  en una corporación sin ánimo de lucro.
-		</div>
-	  </div>
-	  
+ 
+  <Section title="Noticias y Eventos Recientes:">
+	
   </Section>
-  <Section title="¿Que hace la corporación?">
-    Es una organización social de sin ánimo de lucro jurídicamente constituida,
-    vela por los derechos humanos de la comunidad. - Promueve la participación
-    ciudadana - Son proveedores de servicios del estado. Hace contrataciones
-    estipuladas con entidades públicas y privadas.
+
+  <Section title="Misión, Visión y Valores"> 
+
   </Section>
-  <Section title="Proyectos Desarrollados">
-    Hace tres años crearon un proyecto llamado Sistema local de la participación
+  <Section title="Programas y Proyectos">
+	Hace tres años crearon un proyecto llamado Sistema local de la participación
     de la comuna 13, conformados con los líderes de toda la comuna, mediante de
     convenios tienen un semillero infantil hace 2 años donde va de la mano con
     la alcaldía de Medellín, también toca la temática de participación
@@ -50,6 +37,65 @@ import Section from "../components/Section.astro";
       </li>
     </ul>
   </Section>
+  <Section title="Historia de sal y luz">
+    <div
+      class="d-flex flex-column flex-md-row bd-highlight align-items-center responsive-section"
+    >
+      <div class="p-2 bd-highlight img-container">
+        <img src="images/img4.jpg" alt="" class="img-fluid" />
+      </div>
+      <div class="p-2 flex-shrink-1 bd-highlight text-container">
+        Nació entre 1989 y 1990 en la iglesia de san Javier, empezó como un
+        grupo juvenil conformado por 100 jóvenes, creado por la necesidad de la
+        violencia que avía en esos momentos, para que aquellos jóvenes
+        encontraran un apoyo y no estuvieran tan vulnerables a caer en ese
+        mundo, Que a medida del tiempo fue creciendo hasta llegar a convertirse
+        en una corporación sin ánimo de lucro.
+      </div>
+    </div>
+  </Section>
+  <Section title="Impacto"></Section>
+  <Section title="Equipo"></Section>  
+  <Section title="Eventos"></Section>
+  <Section titile="Blog o Noticias"></Section>
+  <Section titile="Transparencia"></Section>
+  <Section title="Testimonios y Reconocimientos">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://www.youtube.com/embed/W7i6hGEOtuw"
+            title="CORPORACIÓN SAL Y LUZ - LABORATORIOS CIUDADANOS"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+        <div class="col-md-6">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://www.youtube.com/embed/nSPpXbbDxas"
+            title="Experiencias Sociales de Resistencia Contra La Violencia en la Comuna 13 de la Ciudad de Medellín"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </Section>
+  <Section title="¿Que hace la corporación?">
+    Es una organización social de sin ánimo de lucro jurídicamente constituida,
+    vela por los derechos humanos de la comunidad. - Promueve la participación
+    ciudadana - Son proveedores de servicios del estado. Hace contrataciones
+    estipuladas con entidades públicas y privadas.
+  </Section>
+
   <Section title="¿Que hace la corporación?">
     Es una organización social sin ánimo de lucro jurídicamente constituida,
     vela por los derechos humanos de la comunidad.
@@ -73,76 +119,8 @@ import Section from "../components/Section.astro";
     el estrato 1 hasta el estrato 4, para todo tipo de población desde los niños
     hasta los adultos mayores.
   </Section>
-  <section class="d-flex align-items-center section-container">
-    <div class="container border rounded-3 border-primary p-2">
-      <div class="row">
-        <div class="col-md-6 my-auto">
-          <h2 class="section-title">Quiero Ayudar</h2>
-          <hr class="section-underline w-100" />
-          <p class="section-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-            itaque enim tenetur nobis autem reprehenderit similique? Repellendus
-            harum quia dolore, cupiditate veritatis, temporibus nisi
-            reprehenderit magni culpa, accusantium sunt ex?
-          </p>
-        </div>
-        <div class="col-md-6">
-          <div class="card shadow p-4">
-            <form>
-              <div class="form-group">
-                <label for="name">Nombres y Apellidos</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  placeholder="Nombres y Apellidos"
-                />
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="email">Correo electrónico</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="Correo electrónico"
-                  />
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="phone">Celular</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="phone"
-                    placeholder="Celular"
-                  />
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="message">Mensaje</label>
-                <textarea
-                  class="form-control"
-                  id="message"
-                  rows="2"
-                  placeholder="Mensaje"></textarea>
-              </div>
-              <div class="form-check">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  id="dataPolicy"
-                />
-                <label class="form-check-label" for="dataPolicy"
-                  >Acepto política de manejo de datos.</label
-                >
-              </div>
-              <button type="submit" class="btn btn-primary mt-3">Enviar</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Section title="Cómo Ayudar"></Section>
+  <FormAyudar/>
 </Layout>
 <style>
   .img-container {
@@ -160,48 +138,5 @@ import Section from "../components/Section.astro";
     }
   }
 
-  /* styles.css */
-  .section-container {
-    background-color: #fff; /* Color de fondo amarillo */
-    padding: 50px 0;
-  }
-
-  .section-title {
-    font-weight: bold;
-    font-size: 2rem;
-    color: #0044cc; /* Color del texto del título */
-  }
-
-  .section-underline {
-    width: 50px;
-    height: 2px;
-    background-color: black;
-    margin: 0;
-    margin-bottom: 15px;
-  }
-
-  .section-description {
-    font-size: 1.2rem;
-    color: #000000; /* Color del texto de la descripción */
-  }
-
-  .card {
-    border: none;
-    border-radius: 10px;
-  }
-
-  .form-control {
-    border-radius: 5px;
-  }
-
-  .btn-primary {
-    background-color: #ffd700; /* Color del botón */
-    border: none;
-    color: black;
-    font-weight: bold;
-  }
-
-  .btn-primary:hover {
-    background-color: #0044cc; /* Color del botón al pasar el mouse */
-  }
+  
 </style>

@@ -3,10 +3,10 @@ interface Props {
   title: string;
 }
 import IconWhatsApp from "../../public/Icons/IconWhatsApp.astro";
-import IconPhone    from "../../public/Icons/IconPhone.astro";
-
+import IconPhone from "../../public/Icons/IconPhone.astro";
 
 import Header from "../components/Header.astro";
+import Mapa from "../components/Mapa.astro";
 
 const { title } = Astro.props;
 ---
@@ -18,12 +18,14 @@ const { title } = Astro.props;
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    
+
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -36,122 +38,126 @@ const { title } = Astro.props;
         <IconWhatsApp />
       </a>
       <a href="tel:+573215574456" class="phone-btn">
-        <IconPhone/>
+        <IconPhone />
       </a>
+      <Mapa />
+
+     
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      ></script>
     </div>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    ></script>
   </body>
+
+  <style is:global>
+
+    :root {
+      --accent: 136, 58, 234;
+      --accent-light: 224, 204, 250;
+      --accent-dark: 49, 10, 101;
+      --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--accent)),
+        rgb(var(--accent-light)) 30%,
+        white 60%
+      );
+    }
+    html {
+      font-family: system-ui, sans-serif;
+      background: #ffffff;
+    }
+    code {
+      font-family:
+        Menlo,
+        Monaco,
+        Lucida Console,
+        Liberation Mono,
+        DejaVu Sans Mono,
+        Bitstream Vera Sans Mono,
+        Courier New,
+        monospace;
+    }
+
+    /*Botones flotantes */
+    .floating-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1000; /* Asegura que los botones estén por encima de otros elementos */
+    }
+
+    .floating-buttons a {
+      background-color: #25d366; /* Color de fondo para WhatsApp */
+      color: white;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      transition:
+        background-color 0.3s,
+        width 0.3s,
+        height 0.3s;
+    }
+
+    .floating-buttons .phone-btn {
+      background-color: #34b7f1; /* Color de fondo para el teléfono */
+    }
+
+    .floating-buttons a:hover {
+      background-color: #128c7e; /* Color al pasar el cursor para WhatsApp */
+    }
+
+    .floating-buttons .phone-btn:hover {
+      background-color: #0d8ecf; /* Color al pasar el cursor para el teléfono */
+    }
+
+    .floating-buttons i {
+      font-size: 24px;
+      transition: font-size 0.3s;
+    }
+
+    /* Media queries para pantallas pequeñas */
+    @media (max-width: 768px) {
+      .floating-buttons {
+        bottom: 15px;
+        right: 15px;
+        gap: 8px;
+      }
+
+      .floating-buttons a {
+        width: 45px;
+        height: 45px;
+      }
+
+      .floating-buttons i {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .floating-buttons {
+        bottom: 10px;
+        right: 10px;
+        gap: 5px;
+      }
+
+      .floating-buttons a {
+        width: 40px;
+        height: 40px;
+      }
+
+      .floating-buttons i {
+        font-size: 18px;
+      }
+    }
+
+    /*FIn Botones flotantes */
+  </style>
 </html>
-<style is:global>
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background: #ffffff;
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-
-  /*Botones flotantes */
-  .floating-buttons {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    z-index: 1000; /* Asegura que los botones estén por encima de otros elementos */
-  }
-
-  .floating-buttons a {
-    background-color: #25d366; /* Color de fondo para WhatsApp */
-    color: white;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    text-decoration: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition:
-      background-color 0.3s,
-      width 0.3s,
-      height 0.3s;
-  }
-
-  .floating-buttons .phone-btn {
-    background-color: #34b7f1; /* Color de fondo para el teléfono */
-  }
-
-  .floating-buttons a:hover {
-    background-color: #128c7e; /* Color al pasar el cursor para WhatsApp */
-  }
-
-  .floating-buttons .phone-btn:hover {
-    background-color: #0d8ecf; /* Color al pasar el cursor para el teléfono */
-  }
-
-  .floating-buttons i {
-    font-size: 24px;
-    transition: font-size 0.3s;
-  }
-
-  /* Media queries para pantallas pequeñas */
-  @media (max-width: 768px) {
-    .floating-buttons {
-      bottom: 15px;
-      right: 15px;
-      gap: 8px;
-    }
-
-    .floating-buttons a {
-      width: 45px;
-      height: 45px;
-    }
-
-    .floating-buttons i {
-      font-size: 20px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .floating-buttons {
-      bottom: 10px;
-      right: 10px;
-      gap: 5px;
-    }
-
-    .floating-buttons a {
-      width: 40px;
-      height: 40px;
-    }
-
-    .floating-buttons i {
-      font-size: 18px;
-    }
-  }
-
-  /*FIn Botones flotantes */
-</style>
