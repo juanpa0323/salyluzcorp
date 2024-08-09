@@ -36,14 +36,12 @@ import IconInstagram from "../../public/Icons/IconInstagram.astro";
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="#"
-              >
+            <a class="nav-link active text-light" aria-current="page" href="#">
               Servisios</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="#"
-              >
+            <a class="nav-link active text-light" aria-current="page" href="#">
               Noticias</a
             >
           </li>
@@ -82,7 +80,18 @@ import IconInstagram from "../../public/Icons/IconInstagram.astro";
       </div>
     </div>
   </nav>
-  <div class="background-image-filter">
+  <div
+    class="background-image-filter"
+    style="width: 100%;
+    height: 500px;
+    background: linear-gradient(
+        rgba(25, 68, 223, 0.5),
+        rgba(255, 255, 0, 0.351)
+      ),url('images/fondo_inicio2.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;"
+  >
     <div
       id="header"
       class="container text-center d-flex flex-column justify-content-center align-items-center"
@@ -141,20 +150,8 @@ import IconInstagram from "../../public/Icons/IconInstagram.astro";
     transform: scale(1);
   }
 
-
-
   /*Titulo e imagen de fondo */
   .background-image-filter {
-    width: 100%;
-    height: 500px;
-    background: linear-gradient(
-        rgba(25, 68, 223, 0.5),
-        rgba(255, 255, 0, 0.351)
-      ),
-      url("images/fondo_inicio2.png");
-    background-size: cover;
-    background-position: center;
-    position: relative;
   }
 
   #header {
@@ -178,16 +175,14 @@ import IconInstagram from "../../public/Icons/IconInstagram.astro";
       color 0.3s ease;
   }
 
-    /* Íconos sociales */
-    .social-icons a {
+  /* Íconos sociales */
+  .social-icons a {
     color: #fff; /* Color de los íconos */
     margin-left: 15px; /* Espaciado entre íconos */
     transition:
       transform 0.3s ease,
       color 0.3s ease;
   }
-
-
 
   /* iconos redes sociales nav */
   .social-icons {
